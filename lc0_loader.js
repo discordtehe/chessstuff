@@ -21,7 +21,7 @@ let useWebWorker = 'undefined' != typeof OffscreenCanvas;
 if (useWebWorker) {
   CreateLC0Worker = function() {
     return new Promise(function(resolve, reject) {
-      resolve(new Worker('https://cdn.jsdelivr.net/gh/discordtehe/chessstuff/lc0.js'));
+      resolve(new Worker('https://cdn.jsdelivr.net/gh/discordtehe/chessstuff@a558fdb6604d8e192c4a588b89c59149a6e592ee/lc0.js'));
     });
   };
 
@@ -120,7 +120,7 @@ const LC0Worker = function() {
 
   CreateLC0Worker = function() {
     return new Promise(function(resolve, reject) {
-      readFileAsText('https://cdn.jsdelivr.net/gh/discordtehe/chessstuff/lc0.js')
+      readFileAsText('https://cdn.jsdelivr.net/gh/discordtehe/chessstuff@a558fdb6604d8e192c4a588b89c59149a6e592ee/lc0.js')
           .then(createWorkerScript)
           .then(loadScript)
           .then(function() {
